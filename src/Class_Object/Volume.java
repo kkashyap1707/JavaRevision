@@ -25,11 +25,11 @@ private int length,breadth,height; /** Here length,breadth,height are properties
 		height = h;
 	}
 	
-	public void showDimension(int l, int b, int h){
+	public void showDimension(){
 
-		System.out.println("Length = "+l);
-		System.out.println("Breadth = "+b);
-		System.out.println("Height = "+h);
+		System.out.println("Length = "+length);
+		System.out.println("Breadth = "+breadth);
+		System.out.println("Height = "+height);
 	}
 	
 }
@@ -49,8 +49,9 @@ private int length,breadth,height; /** Here length,breadth,height are properties
 		 * */
 		
 		Box box = new Box();
-		box.showDimension(4,5,6);
-		box.setDimension(7,8,9);		
+		box.setDimension(7,8,9);
+		box.showDimension();
+				
 	
 
 		/**In this case, it will create a new reference variable of the object Box. 
@@ -59,6 +60,7 @@ private int length,breadth,height; /** Here length,breadth,height are properties
 		 *When garbage collectors runs,it will destroy GARBAGE BLOCK.
 		 * */
 		box = new Box();
+		box.showDimension();
 		
 	}
 
